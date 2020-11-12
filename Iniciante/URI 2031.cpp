@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+	string j1,j2;
+	int jogadas;
+	cin>>jogadas;
+	while(jogadas--){
+		cin>>j1>>j2;
+		if(j1 == "ataque" && j2 == "ataque") cout<<"Aniquilacao mutua"<<endl;
+		else if(j1 == "pedra" && j2 == "pedra") cout<<"Sem ganhador"<<endl;
+		else if(j1 == "papel" && j2 == "papel") cout<<"Ambos venceram"<<endl;
+		else if((j1 == "ataque" && (j2 == "pedra" || j2 == "papel")) || (j1 == "pedra" && j2 == "papel")) cout<<"Jogador 1 venceu"<<endl;
+		else cout<<"Jogador 2 venceu"<<endl;
+	}
+}
